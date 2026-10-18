@@ -84,8 +84,8 @@ jobs:
         if: steps.check-update.outputs.has_update == 'true'
         run: |
           echo "${{ steps.get-sha.outputs.latest_sha }}" > .last-sha
-          git config user.name "github-actions[bot]"
-          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git config user.name "tyowk"
+          git config user.email "ityowk@gmail.com"
           git add .last-sha
           git diff --cached --quiet || git commit -m "chore: update SHA cache @ ${{ steps.get-sha.outputs.latest_sha }}"
           git push origin main
